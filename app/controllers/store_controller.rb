@@ -1,4 +1,5 @@
 class StoreController < ApplicationController
+  skip_before_action :authorize
   # include CurrentStoreCounter
   # before_action :set_store_counter, only: [:index]
   include CurrentCart
