@@ -1,0 +1,15 @@
+<h2>Your Cart</h2>
+<table class="table table-striped">
+  <thead>
+    <th>Product Name</th>
+    <th>PPU</th>
+    <th>quantity</th>
+    <th>Price</th>
+  </thead>
+  <%= render(@cart.line_items) %>
+  <tr class="total_line">
+    <td colspan="3">Total</td>
+    <td class="total_cell"><%= number_to_currency(@cart.total_price) %></td>
+  </tr>
+</table>
+<td class="item_price"><%= number_to_currency(line_item.price) %></td>
